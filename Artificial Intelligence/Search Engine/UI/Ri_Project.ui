@@ -14,152 +14,286 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLineEdit" name="query_input">
-    <property name="geometry">
-     <rect>
-      <x>100</x>
-      <y>120</y>
-      <width>471</width>
-      <height>51</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QFrame" name="frame">
-    <property name="geometry">
-     <rect>
-      <x>-10</x>
-      <y>0</y>
-      <width>821</width>
-      <height>80</height>
-     </rect>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::StyledPanel</enum>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Raised</enum>
-    </property>
-    <widget class="QLabel" name="label">
-     <property name="geometry">
-      <rect>
-       <x>240</x>
-       <y>10</y>
-       <width>291</width>
-       <height>61</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;SEARCH ENGINE &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QLabel" name="label_2">
-    <property name="geometry">
-     <rect>
-      <x>40</x>
-      <y>140</y>
-      <width>55</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>QUERY :</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_3">
-    <property name="geometry">
-     <rect>
-      <x>320</x>
-      <y>190</y>
-      <width>81</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;RESULTS&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-    </property>
-   </widget>
-   <widget class="QTabWidget" name="tabWidget">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>230</y>
-      <width>691</width>
-      <height>381</height>
-     </rect>
-    </property>
-    <property name="currentIndex">
-     <number>1</number>
-    </property>
-    <widget class="QWidget" name="term_by_document_tab">
-     <property name="accessibleName">
-      <string/>
-     </property>
-     <attribute name="title">
-      <string>Term By Document</string>
-     </attribute>
-     <layout class="QGridLayout" name="gridLayout">
-      <item row="0" column="0">
-       <widget class="QTableWidget" name="term_by_document_table">
-        <column>
-         <property name="text">
-          <string>Terrm</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>N° Document</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Frequency</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Weight</string>
-         </property>
-        </column>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-    <widget class="QWidget" name="sorted_documents_tab">
-     <attribute name="title">
-      <string>Sorted Documents</string>
-     </attribute>
-     <layout class="QGridLayout" name="gridLayout_2">
-      <item row="0" column="0">
-       <widget class="QTableWidget" name="stored_documents_table">
-        <column>
-         <property name="text">
-          <string>N° Document </string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Relevance</string>
-         </property>
-        </column>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-   </widget>
-   <widget class="QPushButton" name="search_btn">
-    <property name="geometry">
-     <rect>
-      <x>590</x>
-      <y>130</y>
-      <width>93</width>
-      <height>28</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>SEARCH</string>
-    </property>
-   </widget>
+   <layout class="QVBoxLayout" name="verticalLayout_3">
+    <item>
+     <widget class="QTabWidget" name="tabWidget_2">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="indexation">
+       <attribute name="title">
+        <string>Indexation</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_7">
+        <item>
+         <widget class="QWidget" name="widget_4" native="true">
+          <layout class="QVBoxLayout" name="verticalLayout_5">
+           <item>
+            <widget class="QLabel" name="label">
+             <property name="text">
+              <string>Term Extraction Method</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QWidget" name="widget_5" native="true">
+             <layout class="QHBoxLayout" name="horizontalLayout_2">
+              <item>
+               <widget class="QRadioButton" name="split_rbtn">
+                <property name="text">
+                 <string>Split</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="regex_tokenizer_rbtn">
+                <property name="text">
+                 <string>Regex Tokenizer</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QWidget" name="widget_6" native="true">
+          <layout class="QVBoxLayout" name="verticalLayout_6">
+           <item>
+            <widget class="QLabel" name="label_5">
+             <property name="text">
+              <string>Normalisation Method</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QWidget" name="widget_7" native="true">
+             <layout class="QHBoxLayout" name="horizontalLayout_3">
+              <item>
+               <widget class="QRadioButton" name="porter_stemmer_rbtn">
+                <property name="text">
+                 <string>Porter Stemmer</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="lancaster_stemmer_rbtn">
+                <property name="text">
+                 <string>Lancaster Stemmer</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="indexation_btn">
+          <property name="text">
+           <string>Indexation</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QWidget" name="widget_3" native="true">
+          <layout class="QVBoxLayout" name="verticalLayout_4">
+           <item>
+            <widget class="QLabel" name="label_4">
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;RESULTS&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QTabWidget" name="tabWidget_3">
+             <property name="currentIndex">
+              <number>0</number>
+             </property>
+             <widget class="QWidget" name="term_by_document_tab_2">
+              <property name="accessibleName">
+               <string/>
+              </property>
+              <attribute name="title">
+               <string>Term By Document</string>
+              </attribute>
+              <layout class="QGridLayout" name="gridLayout_3">
+               <item row="0" column="0">
+                <widget class="QTableWidget" name="term_by_document_table_2">
+                 <column>
+                  <property name="text">
+                   <string>Terrm</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>N° Document</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>Frequency</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>Weight</string>
+                  </property>
+                 </column>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="sorted_documents_tab_2">
+              <attribute name="title">
+               <string>Sorted Documents</string>
+              </attribute>
+              <layout class="QGridLayout" name="gridLayout_4">
+               <item row="0" column="0">
+                <widget class="QTableWidget" name="stored_documents_table_2">
+                 <column>
+                  <property name="text">
+                   <string>N° Document </string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>Relevance</string>
+                  </property>
+                 </column>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="pairing">
+       <attribute name="title">
+        <string>Pairing</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="evaluation">
+       <attribute name="title">
+        <string>Evaluation</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QWidget" name="widget" native="true">
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <item>
+            <widget class="QLabel" name="label_2">
+             <property name="text">
+              <string>QUERY :</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="query_input"/>
+           </item>
+           <item>
+            <widget class="QPushButton" name="search_btn">
+             <property name="text">
+              <string>SEARCH</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QWidget" name="widget_2" native="true">
+          <layout class="QVBoxLayout" name="verticalLayout">
+           <item>
+            <widget class="QLabel" name="label_3">
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;RESULTS&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QTabWidget" name="tabWidget">
+             <property name="currentIndex">
+              <number>0</number>
+             </property>
+             <widget class="QWidget" name="term_by_document_tab">
+              <property name="accessibleName">
+               <string/>
+              </property>
+              <attribute name="title">
+               <string>Term By Document</string>
+              </attribute>
+              <layout class="QGridLayout" name="gridLayout">
+               <item row="0" column="0">
+                <widget class="QTableWidget" name="term_by_document_table">
+                 <column>
+                  <property name="text">
+                   <string>Terrm</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>N° Document</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>Frequency</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>Weight</string>
+                  </property>
+                 </column>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="sorted_documents_tab">
+              <attribute name="title">
+               <string>Sorted Documents</string>
+              </attribute>
+              <layout class="QGridLayout" name="gridLayout_2">
+               <item row="0" column="0">
+                <widget class="QTableWidget" name="stored_documents_table">
+                 <column>
+                  <property name="text">
+                   <string>N° Document </string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>Relevance</string>
+                  </property>
+                 </column>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
   </widget>
  </widget>
  <resources/>
